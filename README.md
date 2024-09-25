@@ -1,2 +1,2 @@
-# COMP229Labs
+# COMP228Labs
 Java Programming Course Labs
