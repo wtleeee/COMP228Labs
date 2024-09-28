@@ -38,7 +38,7 @@ public class Test {
             String inputAnswer = JOptionPane.showInputDialog(simulateQuestion(i)).toUpperCase();// store user input
                                                                                                 // answer as upper case
                                                                                                 // string
-            if (checkAnswer((i), inputAnswer) == true) {// when the user input answer is true
+            if (checkAnswer((i), inputAnswer)) {// when the user input answer is true
                 JOptionPane.showMessageDialog(null, generateMessage(true));
                 correctAnswers++;
             } else {
