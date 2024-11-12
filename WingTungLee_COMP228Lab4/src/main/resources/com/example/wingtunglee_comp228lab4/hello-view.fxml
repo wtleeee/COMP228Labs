@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+
+<GridPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.wingtunglee_comp228lab4.HelloController" hgap="10" vgap="10"
+          alignment="CENTER" style="-fx-padding: 20;">
+
+  <!--  setting 5 columns-->
+  <columnConstraints>
+    <ColumnConstraints percentWidth="25"/>
+    <ColumnConstraints percentWidth="25"/>
+    <ColumnConstraints percentWidth="25"/>
+    <ColumnConstraints percentWidth="12.5"/>
+    <ColumnConstraints percentWidth="12.5"/>
+  </columnConstraints>
+
+  <!-- Basic Information TextFields -->
+  <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+  <TextField fx:id="fullNameField" promptText="Full Name" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+  <Label text="Address:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+  <TextField fx:id="addressField" promptText="Address" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+  <Label text="Province:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+  <TextField fx:id="provinceField" promptText="Province" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+  <Label text="City:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+  <TextField fx:id="cityField" promptText="City" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+  <Label text="Postal Code:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+  <TextField fx:id="postalCodeField" promptText="Postal Code" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+  <Label text="Phone Number:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+  <TextField fx:id="phoneField" promptText="Phone Number" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+  <Label text="Email:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+  <TextField fx:id="emailField" promptText="Email" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+  <!-- Major -->
+  <RadioButton fx:id="csRadioButton" text="Computer Science" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+  <RadioButton fx:id="businessRadioButton" text="Business" GridPane.rowIndex="0" GridPane.columnIndex="4"/>
+
+  <!--  Other activities checkboxes-->
+  <CheckBox fx:id="stdCouncilCheckBox" text="Student Council" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+  <CheckBox fx:id="volunteerCheckBox" text="Volunteer Work" GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+
+  <!-- Course Selection -->
+  <ComboBox fx:id="courseComboBox" promptText="Select Course" GridPane.rowIndex="2" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="2" maxWidth="Infinity" maxHeight="Infinity" onAction="#onCourseSelected"/>
+  <ListView fx:id="selectedCoursesList" GridPane.rowIndex="4" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="3" maxWidth="Infinity" maxHeight="Infinity"/>
+
+  <!-- Display Button -->
+  <Button fx:id="displayButton" text="Display" onAction="#onDisplayButtonClick"
+          GridPane.rowIndex="7" GridPane.columnIndex="0" GridPane.columnSpan="5"
+          GridPane.halignment="CENTER"/>
+
+  <!-- Display TextArea -->
+  <TextArea fx:id="infoTextArea" editable="false" wrapText="true" GridPane.rowIndex="8" GridPane.columnIndex="0" GridPane.columnSpan="5"/>
+</GridPane>
