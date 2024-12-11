@@ -23,6 +23,7 @@ public class MainMenu extends Application {
         //create a textfield to input the player id
         Label gameTitleLabel = new Label("Display player with id:");
         TextField playerIdField = new TextField();
+
         Button displayUsersButton = new Button("Display");
         //set the button actions
         createUserButton.setOnAction(e -> CreateUser.display());
